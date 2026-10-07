@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+ <html lang="en"> 
+    <head> 
+        <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>AgriFrost Cold Chain - Desktop Command Center</title> 
+<!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com">
+
+  </script> 
+  <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+     <!-- Lucide Icons CDN --> 
+      <script src="https://unpkg.com/lucide@latest">
+
+      </script> 
+      <style>
+       body 
+       { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; background-color: #f8fafc; }
+        </style>
+         </head>
+          <body class="bg-[#f8fafc] text-slate-800 antialiased min-h-screen flex flex-col"> 
+            <!-- ================= TOP DESKTOP HEADER ================= -->
+              <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-8 py-3.5 flex items-center justify-between shadow-xs"> 
+                <!-- Brand & Network Health --> 
+                 <div class="flex items-center space-x-6"> 
+                    <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0d7a5f] to-[#054434] flex items-center justify-center text-white shadow-md shadow-[#0d7a5f]/20">
+                 <i data-lucide="snowflake" class="w-5 h-5 text-cyan-300">
+
+             </i>
+         </div>
+         <div> 
+    <span class="font-extrabold text-xl tracking-tight text-slate-900">AgriFrost</span> 
+    <p class="text-[10px] text-slate-500 font-semibold tracking-wider uppercase">Cold Chain Infrastructure</p>
+ </div>
+ </div>
+  <div class="hidden xl:flex items-center space-x-2 bg-emerald-50/80 border border-emerald-200 text-emerald-800 px-3 py-1 rounded-full text-xs font-semibold">
+     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> 
+     <span>COLD GRID: 99.8% OPTIMAL</span> 
+    </div>
+ </div>
+  <!-- Navigation Links -->
+    <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+     <a href="#" class="px-3.5 py-1.5 rounded-lg bg-slate-100 text-slate-900 font-bold text-sm">Overview</a> 
+     <a href="pract.html"
+class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition">
+Pract
+</a>
+     <a href="#" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition">Hubs &amp; Network</a>
+      <a href="#" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition">Live Telematics</a>
+       <a href="#" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition">Instant Quote</a> 
+       <a href="#" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 font-medium text-sm transition">Compliance &amp; FSMA</a> 
+    </nav>
+     <!-- Top Action CTAs -->
+       <div class="flex items-center space-x-3">
+     <button class="flex items-center space-x-1.5 bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-4 py-2 rounded-xl shadow-sm transition">
+     <i data-lucide="siren" class="w-3.5 h-3.5 animate-pulse"></i> 
+     <span>DISPATCH COMMAND</span>
+     </button> 
+    
+<button onclick="toggleNotifications()"
+    class="relative p-2 text-slate-400 hover:text-slate-600 rounded-xl hover:bg-slate-100 transition">
+    <i data-lucide="bell" class="w-5 h-5"></i>
+    <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+</button>
+
+<div id="notificationPanel"
+    class="hidden fixed right-6 top-20 z-[100] w-80 bg-white rounded-xl shadow-xl border p-4">
+
+    <h3 class="font-bold text-lg mb-3">Notifications</h3>
+
+    <div class="p-3 bg-red-50 rounded-lg mb-2">
+        <b class="text-red-700">Temperature Alert</b>
+        <p class="text-sm">Check cold storage temperature.</p>
+    </div>
+
+    <div class="p-3 bg-green-50 rounded-lg mb-2">
+        <b class="text-green-700">Delivery Update</b>
+        <p class="text-sm">Check your latest delivery status.</p>
+    </div>
+
+    <button onclick="toggleNotifications()"
+        class="mt-2 text-sm text-blue-600">Close</button>
+</div>
+
+<a href="profile.html"
+   class="w-9 h-9 rounded-full bg-[#0d7a5f] text-white flex items-center justify-center cursor-pointer">
+    <i data-lucide="user" class="w-4 h-4"></i>
+</a>
+        </div>
+    
+    </header> 
+    <!-- ================= PANORAMIC FACILITY HERO ================= --> 
+     <section class="relative bg-slate-950 text-white overflow-hidden py-14 px-8 lg:px-14 border-b border-slate-800">
+         <!-- Facility Background with Gradient Overlay --> 
+ <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1800&auto=format&fit=crop" alt="Agricultural Cold Chain Logistics Facility" class="absolute inset-0 w-full h-full object-cover opacity-25" /> 
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-transparent"></div>
+     <div class="relative max-w-7xl mx-auto space-y-6"> 
+        <!-- Status Badges -->
+ <div class="flex flex-wrap items-center gap-3"> 
+    <span class="bg-black/60 backdrop-blur-md text-emerald-400 text-xs font-bold px-3 py-1 rounded-full border border-emerald-500/40 flex items-center space-x-1.5">
+     <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 
+    <span>IOT MONITORED 24/7 • 99.8% UPLINK</span>
+ </span>
+  <span class="bg-black/60 backdrop-blur-md text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full border border-cyan-500/30 flex items-center space-x-1.5">
+ <i data-lucide="snowflake" class="w-3.5 h-3.5 text-cyan-400"></i>
+  <span>+2.1°C Active Preservation | Zone A Romaine • Trailer #AF-8422</span> 
+</span>
+ </div> 
+ <!-- Headline --> 
+  <div class="max-w-3xl space-y-3">
+     <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Cold Chain Grid Telematics</span>
+     <h1 class="text-3xl lg:text-5xl font-black tracking-tight leading-tight"> Zero-Spoilage Agricultural Cold Chain Infrastructure </h1>
+     <p class="text-slate-300 text-sm lg:text-base leading-relaxed"> End-to-end farm-to-table climate-controlled logistics, automated precooling, and live reefer telematics for fresh produce and organics. </p> 
+</div> 
+<!-- Primary Action Buttons --> 
+ <div class="flex flex-wrap items-center gap-3 pt-2"> 
+<button class="bg-[#0d7a5f] hover:bg-[#0a604a] text-white font-bold text-sm px-5 py-3 rounded-xl shadow-lg shadow-[#0d7a5f]/25 flex items-center space-x-2 transition">
+ <i data-lucide="navigation" class="w-4 h-4"></i> 
+ <span>Track Active Reefer</span>
+ </button>
+ <button class="bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-5 py-3 rounded-xl border border-white/20 flex items-center space-x-2 transition backdrop-blur-sm">
+ <i data-lucide="calculator" class="w-4 h-4 text-cyan-300"></i> 
+ <span>Produce Quote Engine</span>
+ </button>
+  <button class="text-slate-300 hover:text-white font-medium text-sm px-4 py-3 flex items-center space-x-1.5 transition">
+ <i data-lucide="file-check" class="w-4 h-4 text-emerald-400"></i> 
+ <span>FSMA 204 Audit Export</span> 
+</button>
+ </div>
+  <!-- Quick Operational Stats Bar -->
+ <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/80 text-xs">
+ <div>
+ <span class="text-slate-400 uppercase text-[10px] font-bold">Fleet Core Mode</span> 
+ <div class="font-extrabold text-white text-sm mt-0.5 flex items-center space-x-1.5"> 
+<span>Continuous Airflow</span> 
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span> 
+</div> 
+</div> 
+<div>
+     <span class="text-slate-400 uppercase text-[10px] font-bold">Cryo Precooling Hubs</span>
+      <div class="font-extrabold text-white text-sm mt-0.5">14 Operating Online</div> 
+</div> 
+<div>
+ <span class="text-slate-400 uppercase text-[10px] font-bold">Field Excursion Rate</span>
+  <div class="font-extrabold text-emerald-400 text-sm mt-0.5">0.000% (Last 72h)</div> 
+</div>
+<div>
+     <span class="text-slate-400 uppercase text-[10px] font-bold">Audit Clearance</span> 
+<div class="font-extrabold text-white text-sm mt-0.5">FDA FSMA Compliant</div>
+ </div>
+ </div>
+ </div>
+ </section>
+  <!-- ================= EXECUTIVE KPI STRIP ================= --> 
+   <section class="max-w-7xl mx-auto w-full px-8 py-6 -mt-6"> 
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"> 
+    <!-- KPI 1 --> 
+<div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm relative"> 
+<div class="flex items-center justify-between mb-1">
+ <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Thermal SLA</span>
+  <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Real-Time</span> 
+</div> 
+<div class="text-3xl font-black text-slate-900">99.94%</div> 
+<div class="text-xs font-bold text-emerald-700 mt-1">Temp Compliance</div>
+ <p class="text-[11px] text-slate-500 mt-1">Guaranteed SLA, verified by tamper-proof micro-telemetry.</p>
+ </div> 
+ <!-- KPI 2 -->
+ <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm relative">
+ <div class="flex items-center justify-between mb-1"> 
+<span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Hydro-Vacuum</span> 
+<span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">Fast Chill</span>
+ </div>
+  <div class="text-3xl font-black text-slate-900">&lt; 18 min</div>
+ <div class="text-xs font-bold text-blue-700 mt-1">Rapid Precooling</div> 
+ <p class="text-[11px] text-slate-500 mt-1">Hydro-chilling &amp; forced-air field-heat extraction post harvest.</p> 
+</div> 
+<!-- KPI 3 --> 
+ <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm relative">
+     <div class="flex items-center justify-between mb-1"> 
+    <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Interstate Grid</span> 
+<span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-0.5 rounded">Active Fleet</span>
+ </div> 
+ <div class="text-3xl font-black text-slate-900">1,420+</div>
+ <div class="text-xs font-bold text-slate-800 mt-1">Smart Reefer Units</div>
+  <p class="text-[11px] text-slate-500 mt-1">Continuous telemetry across Pacific, Intermountain &amp; Midwest corridors.</p>
+ </div>
+  <!-- KPI 4 --> 
+<div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm relative">
+<div class="flex items-center justify-between mb-1">
+ <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Perishability Metric</span>
+  <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Zero Loss</span>
+ </div>
+  <div class="text-3xl font-black text-slate-900">0.02%</div>
+   <div class="text-xs font-bold text-emerald-700 mt-1">Spoilage Benchmark</div>
+ <p class="text-[11px] text-slate-500 mt-1">Industry record low benchmark backed by $250k cargo load guarantee.</p>
+ </div> 
+</div> 
+</section> 
+<!-- ================= DUAL-PANEL COMMAND DASHBOARD ================= --> 
+ <main class="max-w-7xl mx-auto w-full px-8 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-6 flex-1"> 
+    <!-- LEFT COLUMN: Live Telematics, Excursion Graph, Waypoints (7 Cols) -->
+ <div class="lg:col-span-7 space-y-6"> 
+    <!-- Live Reefer Telematics Quad Card -->
+<div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-5"> 
+ <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-4">
+<div class="flex items-center space-x-3"> 
+<span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-2.5 py-1 rounded-md">IN TRANSIT</span> 
+<h2 class="text-lg font-black text-slate-900">Reefer Unit #AF-8422</h2> 
+</div>
+ <div class="flex items-center space-x-2 text-xs text-slate-500">
+ <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> 
+ <span>SUB-MINUTE POLLING</span> 
+</div> 
+</div> 
+<div class="text-xs text-slate-500 flex items-center justify-between"> 
+<span>Salinas Valley, CA ➔ Hunt's Point Terminal Market, NY</span> 
+<span class="font-bold text-slate-800">22,400 lbs Organic Greens</span>
+ </div> 
+ <!-- 4 Live Sensor Vitals -->
+   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+ <div class="bg-cyan-50/60 p-3 rounded-xl border border-cyan-100"> 
+<div class="flex items-center justify-between text-slate-500 text-[10px] font-semibold"> 
+<span>Cabinet Temp</span> 
+<i data-lucide="thermometer" class="w-3.5 h-3.5 text-cyan-600"></i> 
+</div> 
+<div class="text-xl font-black text-cyan-950 mt-1">+1.8°C</div>
+ <div class="text-[10px] text-slate-500 mt-0.5">Set: +2.0°C (±0.2)</div> 
+ <div class="w-full bg-cyan-200 h-1 rounded-full mt-2 overflow-hidden"> 
+    <div class="bg-cyan-600 h-full w-[90%]"></div> 
+</div> 
+</div> 
+<div class="bg-blue-50/60 p-3 rounded-xl border border-blue-100"> 
+<div class="flex items-center justify-between text-slate-500 text-[10px] font-semibold"> 
+<span>RH Moisture</span> 
+<i data-lucide="droplets" class="w-3.5 h-3.5 text-blue-600"></i> 
+</div> 
+<div class="text-xl font-black text-blue-950 mt-1">94%</div> 
+<div class="text-[10px] text-slate-500 mt-0.5">Optimal Mist Active</div> 
+<div class="w-full bg-blue-200 h-1 rounded-full mt-2 overflow-hidden"> 
+<div class="bg-blue-600 h-full w-[94%]"></div> 
+</div> 
+</div> 
+<div class="bg-emerald-50/60 p-3 rounded-xl border border-emerald-100"> 
+<div class="flex items-center justify-between text-slate-500 text-[10px] font-semibold"> 
+<span>Ethylene Gas</span> 
+<i data-lucide="wind" class="w-3.5 h-3.5 text-emerald-600"></i> 
+</div> 
+<div class="text-xl font-black text-emerald-950 mt-1">0.02 
+<span class="text-xs font-medium">ppm</span>
+</div> 
+<div class="text-[10px] text-slate-500 mt-0.5">Catalytic Scrubbed</div> 
+<div class="w-full bg-emerald-200 h-1 rounded-full mt-2 overflow-hidden"> 
+<div class="bg-emerald-600 h-full w-[20%]"></div> 
+</div>
+ </div> 
+ <div class="bg-slate-50 p-3 rounded-xl border border-slate-100"> 
+<div class="flex items-center justify-between text-slate-500 text-[10px] font-semibold"> 
+<span>Diesel / SOC</span> 
+<i data-lucide="battery-charging" class="w-3.5 h-3.5 text-slate-700"></i> 
+</div> 
+<div class="text-xl font-black text-slate-900 mt-1">88% 
+<span class="text-xs text-slate-500 font-normal">/ 94%</span>
+</div>
+ <div class="text-[10px] text-slate-500 mt-0.5">32.4h Tank Range</div>
+  <div class="w-full bg-slate-200 h-1 rounded-full mt-2 overflow-hidden"> 
+<div class="bg-slate-700 h-full w-[88%]"></div> 
+</div> 
+</div> 
+</div>
+ <!-- 24-Hour Excursion-Safe Telemetry Waveform -->
+ <div class="pt-2 space-y-2"> 
+<div class="flex items-center justify-between"> 
+    <div> 
+<h3 class="font-extrabold text-sm text-slate-900">24-Hour Excursion-Safe Telemetry Waveform</h3> 
+<p class="text-[11px] text-slate-500">Dual-core reefer probes (Front / Rear Bulkhead) vs. Permissible Envelope (+1.0°C to +3.5°C)</p> 
+</div> 
+<div class="flex items-center space-x-3 text-[10px] font-semibold"> 
+<span class="flex items-center space-x-1 text-[#0d7a5f]">
+<span class="w-2.5 h-0.5 bg-[#0d7a5f] inline-block"></span> 
+<span>Probe A (Front)</span>
+</span>
+ <span class="flex items-center space-x-1 text-cyan-600">
+<span class="w-2.5 h-0.5 bg-cyan-600 inline-block"></span> 
+<span>Probe B (Rear)</span>
+</span> 
+</div> 
+</div> 
+<!-- SVG Chart --> 
+ <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-100"> 
+    <svg viewBox="0 0 600 120" class="w-full h-32 overflow-visible"> 
+    <defs> 
+<linearGradient id="deskChartGrad" x1="0" y1="0" x2="0" y2="1"> 
+<stop offset="0%" stop-color="#0d7a5f" stop-opacity="0.25"/> 
+<stop offset="100%" stop-color="#0d7a5f" stop-opacity="0.0"/> 
+</linearGradient>
+ </defs>
+  <!-- Safe Envelope Range -->
+ <rect x="0" y="20" width="600" height="70" fill="#0d7a5f" fill-opacity="0.06" rx="6" /> 
+ <line x1="0" y1="20" x2="600" y2="20" stroke="#0d7a5f" stroke-dasharray="4,4" stroke-width="1" stroke-opacity="0.35" /> 
+ <line x1="0" y1="90" x2="600" y2="90" stroke="#0d7a5f" stroke-dasharray="4,4" stroke-width="1" stroke-opacity="0.35" /> 
+ <text x="10" y="15" fill="#0d7a5f" font-size="9" font-weight="bold">Upper Bound (+3.5°C FSMA Margin)</text> 
+ <text x="10" y="105" fill="#0d7a5f" font-size="9" font-weight="bold">Pre-Freeze Boundary (-1.0°C)</text>
+  <!-- Waveform Area -->
+ <path d="M 0,60 Q 150,55 300,62 T 450,52 T 600,58 L 600,110 L 0,110 Z" fill="url(#deskChartGrad)" /> 
+ <path d="M 0,60 Q 150,55 300,62 T 450,52 T 600,58" fill="none" stroke="#0d7a5f" stroke-width="2.5" stroke-linecap="round" /> 
+<path d="M 0,64 Q 150,60 300,66 T 450,56 T 600,60" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,2" /> 
+<!-- Live Ping Marker -->
+  <circle cx="600" cy="58" r="5" fill="#0d7a5f" />
+   <circle cx="600" cy="58" r="10" fill="#0d7a5f" fill-opacity="0.25" class="animate-ping" />
+ </svg>
+  <!-- Chart Timeline Ticks -->
+    <div class="flex justify-between text-[10px] text-slate-500 font-medium pt-2 border-t border-slate-200/70 mt-2">
+         <span>24h Ago (Depart Salinas)</span>
+          <span>18h (Tehachapi Pass)</span>
+  <span>12h (Flagstaff Route)</span>
+    <span>6h (Amarillo Rest Hub)</span>
+     <span class="font-extrabold text-[#0d7a5f]">Now (+1.8°C Stable)</span> 
+    </div> 
+</div> 
+</div> 
+<!-- Chain of Custody & Enroute Intermodal Checkpoints -->
+  <div class="pt-2 space-y-2"> 
+    <h3 class="font-bold text-xs uppercase tracking-wider text-slate-600">Chain of Custody &amp; Enroute Intermodal Checkpoints</h3> 
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3"> 
+    <div class="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100 text-xs"> 
+<div class="flex items-center space-x-1.5 text-emerald-800 font-bold"> 
+<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+ <span>COMPLETED • 04:30 AM</span> 
+</div> 
+<h4 class="font-extrabold text-slate-900 mt-1">Salinas Fresh Hub</h4> 
+<p class="text-[11px] text-slate-500 mt-0.5">Hydro-vacuum prechilled to +1.6°C</p> 
+</div> 
+<div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100 text-xs"> 
+<div class="flex items-center space-x-1.5 text-blue-800 font-bold"> 
+<i data-lucide="refresh-cw" class="w-4 h-4 text-blue-600 animate-spin"></i> 
+<span>CURRENT CORRIDOR</span> 
+</div>
+ <h4 class="font-extrabold text-slate-900 mt-1">I-40 Eastbound Intermodal</h4>
+ <p class="text-[11px] text-slate-500 mt-0.5">GPS fix: 35.1982° N, 101.8313° W</p> 
+</div> 
+<div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs"> 
+    <div class="flex items-center space-x-1.5 text-slate-500 font-bold"> 
+        <i data-lucide="clock" class="w-4 h-4 text-slate-400"></i> 
+<span>ETA TOMORROW • 06:00 AM</span> 
+</div> 
+<h4 class="font-extrabold text-slate-900 mt-1">Hunt's Point Terminal NY</h4> 
+<p class="text-[11px] text-slate-500 mt-0.5">Dock #42 Fast Automated Ingest</p> 
+</div>
+ </div>
+ </div>
+  <!-- Dispatcher Telematics Quick Actions -->
+ <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3"> 
+    <div> 
+<span class="text-xs font-bold text-slate-900 flex items-center space-x-1"> <i data-lucide="sliders" class="w-3.5 h-3.5 text-[#0d7a5f]"></i> 
+<span>Dispatcher Telematics Actions</span> 
+</span> 
+<p class="text-[10px] text-slate-500">Direct two-way satellite CAN-bus micro-commands</p> 
+</div> 
+<div class="flex items-center space-x-2"> 
+<button class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs px-3 py-1.5 rounded-lg flex items-center space-x-1 transition"> 
+<i data-lucide="radio" class="w-3.5 h-3.5"></i> 
+<span>Ping In-Cab Driver</span> 
+</button> 
+<button class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs px-3 py-1.5 rounded-lg flex items-center space-x-1 transition"> 
+<i data-lucide="thermometer" class="w-3.5 h-3.5"></i> 
+<span>Calibrate Setpoint</span> 
+</button> 
+<button class="bg-[#0d7a5f] hover:bg-[#0a604a] text-white font-semibold text-xs px-3.5 py-1.5 rounded-lg flex items-center space-x-1 shadow-sm transition"> 
+<i data-lucide="file-text" class="w-3.5 h-3.5"></i> 
+<span>Issue Digital eBOL</span> 
+</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+<!-- RIGHT COLUMN: Regional Hubs, Instant Booking & Live Terminal Feed (5 Cols) --> 
+ <div class="lg:col-span-5 space-y-6">
+     <!-- Active Agri-Hubs Status -->
+ <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4">
+<div class="flex items-center justify-between"> 
+<h2 class="text-sm font-extrabold text-slate-900">Active Agri-Hubs Status</h2> 
+<span class="text-[11px] font-semibold text-slate-500">3 Active Hubs</span> 
+</div> 
+<div class="space-y-3"> 
+    <!-- Hub 1 -->
+ <div class="p-3 rounded-xl border border-slate-100 bg-slate-50/60 space-y-1.5"> 
+    <div class="flex items-center justify-between text-xs"> 
+<h3 class="font-extrabold text-slate-900">Salinas Central Hub #01</h3> 
+<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">84% Load</span> 
+</div> 
+<p class="text-[11px] text-slate-500">Capacity: 350 metric tons/day hydro-vacuum throughput.</p> 
+<div class="flex justify-between text-[10px] text-slate-400 font-medium"> 
+    <span>Avg Ingest: 11 mins</span> 
+<span class="text-emerald-700 font-bold">Blast Tunnel: +0.8°C</span> 
+</div> 
+</div> 
+<!-- Hub 2 -->
+  <div class="p-3 rounded-xl border border-slate-100 bg-slate-50/60 space-y-1.5"> 
+<div class="flex items-center justify-between text-xs"> 
+<h3 class="font-extrabold text-slate-900">Central Valley Depot #04</h3> 
+<span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">520 Units</span> 
+</div> 
+<p class="text-[11px] text-slate-500">Staging yard for stone fruit, table grapes &amp; citrus.</p> 
+<div class="flex justify-between text-[10px] text-slate-400 font-medium"> 
+<span>Trailer Ready: 38</span> 
+<span class="text-blue-700 font-bold">Solar Pre-Cooling Online</span> 
+</div> 
+</div> 
+<!-- Hub 3 -->
+  <div class="p-3 rounded-xl border border-slate-100 bg-slate-50/60 space-y-1.5"> 
+    <div class="flex items-center justify-between text-xs"> 
+    <h3 class="font-extrabold text-slate-900">Midwest Intermodal Dock #09</h3>
+ <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">Nominal</span> 
+</div>
+ <p class="text-[11px] text-slate-500">Cross-dock intermodal transfer facility with cryogenic backup.</p> 
+ <div class="flex justify-between text-[10px] text-slate-400 font-medium"> 
+<span>Freezer Bay: -28.4°C</span> 
+<span class="text-[#0d7a5f] font-bold">9 Docks Active</span> 
+</div> 
+</div>
+ </div> 
+</div> 
+<!-- Instant Reefer Booking Engine Widget --> 
+ <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4"> 
+<div class="flex items-center justify-between"> 
+<h2 class="text-sm font-extrabold text-slate-900">Instant Reefer Booking</h2>
+ <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Dynamic Pricing</span>
+ </div> 
+ <!-- Commodity Selection Buttons -->
+   <div class="space-y-1.5"> 
+<label class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Commodity Classification</label>
+ <div class="grid grid-cols-3 gap-2"> 
+    <button class="bg-[#0d7a5f] text-white p-2 rounded-xl text-center text-xs font-bold shadow-xs"> 
+        <span>Greens</span>
+         <span class="block text-[9px] font-normal opacity-80">1° - 3°C</span>
+         </button> 
+         <button class="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 p-2 rounded-xl text-center text-xs font-semibold">
+             <span>Berries</span> 
+             <span class="block text-[9px] font-normal text-slate-400">0° - 2°C</span> 
+            </button>
+     <button class="bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 p-2 rounded-xl text-center text-xs font-semibold">
+<span>Avocados</span> 
+<span class="block text-[9px] font-normal text-slate-400">7° - 11°C</span>
+ </button> </div> </div> <!-- Origin and Drop Inputs --> <div class="grid grid-cols-2 gap-2 text-xs"> <div> <label class="text-[10px] text-slate-400 font-semibold block mb-1">Pick Location</label> <div class="bg-slate-50 border border-slate-200 p-2 rounded-xl font-bold text-slate-800"> Salinas (CA) </div> </div> <div> <label class="text-[10px] text-slate-400 font-semibold block mb-1">Drop Facility</label> <div class="bg-slate-50 border border-slate-200 p-2 rounded-xl font-bold text-slate-800"> Hunt's Point (NY) </div> </div> </div> <!-- Price & CTA --> <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-100 flex items-center justify-between"> <div> <span class="text-[10px] font-bold uppercase text-slate-400">Dedicated Capacity Est.</span> <div class="text-2xl font-black text-slate-900">$3,340</div> <p class="text-[9px] text-slate-500">Includes Precooling &amp; FSMA Audit Pack</p> </div> <button class="bg-[#0d7a5f] hover:bg-[#095b46] text-white font-extrabold text-xs px-4 py-2.5 rounded-xl shadow-md transition"> Lock Reefer </button> </div> </div> <!-- Live Terminal CCTV Feed Preview --> <div class="relative h-44 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-900 group"> <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Salinas Terminal Facility" class="w-full h-full object-cover opacity-75 group-hover:scale-105 transition duration-500" /> <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 flex items-end justify-between p-3.5"> <div class="flex items-center space-x-2 text-white text-xs"> <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> <span class="font-bold">Salinas Operations Terminal • Active Hub</span> </div> <span class="bg-black/60 backdrop-blur-md text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/30"> CAM #02 LIVE </span> </div> </div> </div> </main> <!-- ================= COMPLIANCE & FSMA BAR ================= --> <section class="border-t border-slate-200 bg-white py-5 px-8"> <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4"> <div> <h4 class="text-xs font-black uppercase tracking-wider text-slate-900">Certified Food Safety &amp; Cryptographic Custody</h4> <p class="text-[11px] text-slate-500">Automated CTE logging under FDA Food Safety Modernization Act (FSMA) Rule 204.</p> </div> <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-600"> <span class="flex items-center space-x-1.5"> <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> <span>USDA Organic</span> </span> <span class="flex items-center space-x-1.5"> <i data-lucide="check-circle" class="w-4 h-4 text-[#0d7a5f]"></i> <span>FSMA 204 Ready</span> </span> <span class="flex items-center space-x-1.5"> <i data-lucide="award" class="w-4 h-4 text-blue-600"></i> <span>PrimusGFS Certified</span> </span> <span class="flex items-center space-x-1.5"> <i data-lucide="refresh-cw" class="w-4 h-4 text-cyan-700"></i> <span>HACCP Chain-of-Custody</span> </span> </div> </div> </section> <!-- ================= ENTERPRISE FOOTER ================= --> <footer class="bg-slate-900 text-slate-400 text-xs py-10 px-8 border-t border-slate-800 mt-auto"> <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"> <!-- Col 1: Brand --> <div class="space-y-3"> <div class="flex items-center space-x-2 text-white"> <div class="w-7 h-7 rounded-lg bg-[#0d7a5f] flex items-center justify-center text-cyan-300"> <i data-lucide="snowflake" class="w-4 h-4"></i> </div> <span class="font-extrabold text-base tracking-tight">AgriFrost</span> </div> <p class="text-[11px] leading-relaxed text-slate-400"> Intelligent post-harvest cold chain infrastructure, reefer fleet telematics, and FSMA rule 204 automated food safety compliance. </p> </div> <!-- Col 2: Platform Telematics --> <div class="space-y-2"> <span class="text-white font-bold text-xs uppercase tracking-wider block">Platform Telematics</span> <ul class="space-y-1.5 text-[11px]"> <li><a href="#" class="hover:text-white transition">Thermal Excursion Alerts</a></li> <li><a href="#" class="hover:text-white transition">Hub Reefer Dwell Time</a></li> <li><a href="#" class="hover:text-white transition">Sensor Calibration Logs</a></li> <li><a href="#" class="hover:text-white transition">Pre-Cooling Facilities</a></li> </ul> </div> <!-- Col 3: Regulatory & Safety --> <div class="space-y-2"> <span class="text-white font-bold text-xs uppercase tracking-wider block">Regulatory &amp; Safety</span> <ul class="space-y-1.5 text-[11px]"> <li><a href="#" class="hover:text-white transition">FSMA Rule 204 Traceability</a></li> <li><a href="#" class="hover:text-white transition">Critical Tracking Events (CTEs)</a></li> <li><a href="#" class="hover:text-white transition">Chain of Custody Certificates</a></li> <li><a href="#" class="hover:text-white transition">USDA Commodity Standards</a></li> </ul> </div> <!-- Col 4: Grid Operations --> <div class="space-y-2"> <span class="text-white font-bold text-xs uppercase tracking-wider block">Grid Operations</span> <div class="bg-slate-800/80 p-3 rounded-xl border border-slate-700/80 text-[11px] space-y-1.5 text-slate-300"> <div class="flex justify-between"> <span>Active Reefer Units</span> <span class="text-white font-bold">1,421</span> </div> <div class="flex justify-between"> <span>Mean Drift Variance</span> <span class="text-emerald-400 font-bold">±0.2°C</span> </div> <div class="flex justify-between"> <span>SOC Battery Index</span> <span class="text-cyan-400 font-bold">98.4%</span> </div> </div> </div> </div> <div class="max-w-7xl mx-auto pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between text-[11px] text-slate-500"> <span>© 2025 AgriFrost Logistics Systems Inc. All rights reserved.</span> <div class="flex space-x-4 mt-2 sm:mt-0"> <a href="#" class="hover:text-slate-300 transition">Privacy Policy</a> <a href="#" class="hover:text-slate-300 transition">Terms of Carriage</a> <a href="#" class="hover:text-slate-300 transition">Emergency Protocols</a> </div> </div> </footer> <!-- Lucide Script Initialization --> <script> lucide.createIcons(); 
+
+ </script>
+ <script>
+function toggleNotifications() {
+    document.getElementById("notificationPanel")
+        .classList.toggle("hidden");
+}
+</script>
+  </body> 
+  </html>
+
+
+
+  

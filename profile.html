@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | AgriFrost</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-6">
+
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow">
+        <h1 class="text-3xl font-bold text-green-800 mb-6">
+            My Profile
+        </h1>
+
+        <form id="profileForm" class="space-y-4">
+
+            <div>
+                <label class="block mb-1">Full Name</label>
+                <input id="name" type="text" required
+                    placeholder="Enter your name"
+                    class="w-full border p-3 rounded-lg">
+            </div>
+
+            <div>
+                <label class="block mb-1">Email</label>
+                <input id="email" type="email" required
+                    placeholder="Enter your email"
+                    class="w-full border p-3 rounded-lg">
+            </div>
+
+            <div>
+                <label class="block mb-1">Mobile Number</label>
+                <input id="mobile" type="tel"
+                    placeholder="Enter mobile number"
+                    class="w-full border p-3 rounded-lg">
+            </div>
+
+            <div>
+                <label class="block mb-1">Address</label>
+                <textarea id="address"
+                    placeholder="Enter your address"
+                    class="w-full border p-3 rounded-lg"></textarea>
+            </div>
+
+            <div>
+                <label class="block mb-1">Farmer ID</label>
+                <input id="farmerId" type="text"
+                    placeholder="Enter Farmer ID"
+                    class="w-full border p-3 rounded-lg">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-green-700 text-white p-3 rounded-lg font-bold">
+                Save Profile
+            </button>
+
+        </form>
+
+        <p id="message" class="mt-4 text-green-700 font-semibold"></p>
+
+        <a href="index.html"
+            class="inline-block mt-5 text-green-800 underline">
+            Back to Home
+        </a>
+    </div>
+
+    <script>
+        const form = document.getElementById("profileForm");
+
+        // Previously saved details show again
+        ["name", "email", "mobile", "address", "farmerId"].forEach(id => {
+            document.getElementById(id).value =
+                localStorage.getItem("profile_" + id) || "";
+        });
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            ["name", "email", "mobile", "address", "farmerId"].forEach(id => {
+                localStorage.setItem(
+                    "profile_" + id,
+                    document.getElementById(id).value
+                );
+            });
+
+            document.getElementById("message").textContent =
+                "Profile saved successfully!";
+        });
+    </script>
+
+</body>
+</html>
